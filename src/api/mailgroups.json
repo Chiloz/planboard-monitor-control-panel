@@ -1,0 +1,51 @@
+{
+    "divisions":[
+        {
+          "name": "Cloud & Development",
+          "communities": [
+            {
+              "name": "C&D Talenten",
+              "units": ["K9A", "Q9A"]
+            },
+            {
+              "name": "Microsoft",
+              "units": ["K4A","K4B","K4C"]
+            }
+          ]
+        },
+        {
+          "name": "Digital Manufacturing",
+          "communities": [
+            {
+              "name": "Smart Product Testing",
+              "units": ["Q1A"]
+            },
+            {
+              "name": "High Tech Test Engineering",
+              "units": ["Q3Z", "Q3A"]
+            },
+            {
+              "name": "DMF Management",
+              "units": ["Q0A","Q0C"]
+            }
+          ]
+        },
+        {
+          "name": "Quality Engineering & Testing",
+          "communities": [
+            {
+              "name": "Agile Quality Improvement",
+              "units": ["M4B"]
+            },
+            {
+              "name": "Agile Test Engineering",
+              "units": ["M1A", "M1B", "M1D"]
+            },
+            {
+              "name": "DA&T Talenten",
+              "units": ["M9A"]
+            }
+          ]
+        }
+    ]
+}

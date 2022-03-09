@@ -1,0 +1,36 @@
+#planboard__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.form-check-input:checked {
+    background-color: #0070ad;
+    border-color: #0070ad;
+}
+
+button {
+    background-color: #0070ad;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.disabled-button {
+    pointer-events: none;
+    transition: none;
+    opacity: 0.4;
+    border-color: lightgrey;
+    background-color: lightgrey;
+}
+
+#planboard__savebutton {
+    margin-top: 1rem;
+}
+
+#planboard__no-changes-detected {
+    color: grey;
+    margin: 1.3rem;
+    position: absolute;
+}

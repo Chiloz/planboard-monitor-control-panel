@@ -1,0 +1,7 @@
+<app-section-title 
+    title="Mailgroepen aanpassen" 
+    warningText="Je hebt nog geen mailgroepen geselecteerd"
+    [warningCondition]="user?.units?.length == 0 || user?.units?.length == undefined"
+></app-section-title>
+
+<app-mailgroup-division *ngFor="let division of divisions" [division]="division" [user]="this.user"></app-mailgroup-division>

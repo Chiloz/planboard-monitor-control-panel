@@ -1,0 +1,22 @@
+<app-section-title
+    title="Tijden aanpassen"
+    warningText="Je hebt nog geen tijden geselecteerd"
+    [warningCondition]="this.selectedTimes.length <= 0"
+></app-section-title>
+
+<div class="row">
+    <div class="col">
+        Mails worden verstuurd om:
+    </div>
+    <div class="col-9"> 
+        <ng-multiselect-dropdown
+            [placeholder]="'Selecteer tijd(en)'"
+            [settings]="dropdownSettings"
+            [data]="dropdownList"
+            [(ngModel)]="selectedTimes"
+            (onSelect)="onTimeChange()"
+            (onDeSelect)="onTimeChange()"
+        >
+        </ng-multiselect-dropdown>
+    </div>
+</div>

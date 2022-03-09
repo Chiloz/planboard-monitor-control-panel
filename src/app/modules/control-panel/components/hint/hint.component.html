@@ -1,0 +1,16 @@
+<div *ngIf="user">
+    <ng-container *ngIf="user.isActive && this.originalTimes.length !== 0 && this.originalUnits.length !== 0; else noHintAvailable">
+        <p>Je ontvangt dagelijks een mail om
+            <span class="hint-highlight">{{ getHint("times") }}</span>
+            vanuit
+            <span class="hint-highlight">{{ getHint("units") }}</span>
+        </p>
+    </ng-container>
+  
+    <ng-template #noHintAvailable>
+        <p class="hint-warning" *ngIf="user.isActive">
+            <i class="fa fa-exclamation-triangle"></i> Je wilt mails ontvangen, maar je hebt nog niet alles juist ingesteld en/of opgeslagen.
+        </p>
+        <p class="no-hint" *ngIf="!user.isActive">Je ontvangt geen mails vanuit de Planbord Monitor</p>
+    </ng-template>
+</div>

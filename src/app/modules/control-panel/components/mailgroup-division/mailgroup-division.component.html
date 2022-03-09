@@ -1,0 +1,12 @@
+<label class="mailgroup__title">
+    <input type="checkbox" [(ngModel)]="masterSelected" (change)="toggleAll()" [indeterminate]="indeterminate" /> {{ division.name }}
+</label>
+
+<div class="row mailgroup__units">
+    <div class="col-sm-4" *ngFor="let unit of checkedUnits">
+        <label class="checkbox-inline">
+            <input type="checkbox" class="checkbox" [(ngModel)]="unit.isSelected" (change)="onChangeSelected(unit.name)"/>
+            {{ unit.name }}
+        </label>
+    </div>
+</div>

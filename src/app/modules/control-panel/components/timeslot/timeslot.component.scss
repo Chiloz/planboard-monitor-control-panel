@@ -1,0 +1,12 @@
+:host ::ng-deep .multiselect-dropdown .dropdown-btn {
+    padding: 1px 12px 6px !important;
+}
+
+:host ::ng-deep .multiselect-dropdown .dropdown-btn .selected-item-container .selected-item {
+    background-color: #0070ad;
+    margin-top: 5px;
+}
+
+:host ::ng-deep .dropdown-list{
+    overflow: hidden;
+}

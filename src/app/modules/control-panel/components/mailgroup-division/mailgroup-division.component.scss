@@ -1,0 +1,29 @@
+input {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+label:hover {
+    background-color: #ebebeb;
+}
+
+.mailgroup__title {
+    margin-bottom: 10px;
+    user-select: none;
+    font-weight: bold;
+}
+
+.mailgroup__units {
+    padding-left: 2rem
+}
+
+.mailgroup__units .col-sm-4 {
+    margin-bottom: 10px;
+    user-select: none;
+}

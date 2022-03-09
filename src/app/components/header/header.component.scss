@@ -1,0 +1,11 @@
+.navbar-custom {
+    height: 5rem;
+    background-color: #0070ad;
+}
+.nav-custom li a {
+    color: white;
+}
+
+.nav-custom li a.isActive{
+    font-weight: 700;
+}

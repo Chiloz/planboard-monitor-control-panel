@@ -1,0 +1,25 @@
+<div *ngIf="user && errorMessage == ''; else userNotFound">
+    <div id="planboard__title">
+        <div class="form-check form-switch">
+            <label><span class="fw-bold">Planbord Monitor</span> - {{ user.fullName }}</label>
+            <input class="form-check-input" type="checkbox" [(ngModel)]="user.isActive" (change)="this.toggleActiveUser()">
+        </div>
+    </div>
+
+    <app-hint [user]="user" [originalTimes]="this.originalTimes" [originalUnits]="this.originalUnits"></app-hint>
+    
+    <div class="card p-4" [ngClass]="{'disabled' : !user.isActive }">
+        
+        <app-timeslot [user]="user" class="mb-4"></app-timeslot>
+      
+        <app-mailgroups-list [user]="user" class="mb-4"></app-mailgroups-list>
+      
+    </div>
+
+    <button type="button" class="btn btn-primary" id="planboard__savebutton" [ngClass]="{'disabled-button' : checkIfUnableToSave() }" (click)="saveUser()">Wijzigingen opslaan</button>
+    <span *ngIf="!this.changesDetected()" id="planboard__no-changes-detected"><i>Geen wijzigingen gedetecteerd</i></span> 
+</div>
+
+<ng-template #userNotFound>
+    <pre>{{ errorMessage }}</pre>
+</ng-template>
