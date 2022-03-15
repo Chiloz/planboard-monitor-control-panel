@@ -22,10 +22,9 @@ export class UserService {
   // Uploads changes back to the database through the API
   setUser(user: IUser) {
     // In this example this function will not work, since it needs a real API to write back data
-    return this.http.post<IUser>(this.url, user)
-      .pipe(
-        catchError(this.handleError)
-      )
+    return this.http.post<IUser>(this.url, user).pipe(
+      catchError(this.handleError)
+    )
   }
   
   private handleError (err: HttpErrorResponse) {

@@ -19,7 +19,7 @@ export class MailgroupsListComponent implements OnInit {
   ngOnInit(): void {
     this.sub = this.mailgroupService.getMailgroups().subscribe({
       next: (data) => {
-        this.divisions = data.divisions;
+        this.divisions = data;
       },
       error: (err: string) => console.log(err)
     });

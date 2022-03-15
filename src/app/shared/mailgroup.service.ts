@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from "rxjs";
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
+import { IDivision } from "./model/division.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,11 @@ export class MailgroupService {
   }
 
   // Gets all available mailgroups from the URL
-  getMailgroups(): Observable<any> {
+  getMailgroups(): Observable<IDivision[]> {
     return this.http.get<any>(this.url).pipe(
+      map(result => {
+        return result.divisions
+      }),
       catchError(this.handleError)
     )
   }
